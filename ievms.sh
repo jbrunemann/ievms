@@ -206,7 +206,7 @@ boot_ievms() {
 # if present in the drive. It will shut itself down after installation.
 boot_auto_ga() {
     boot_ievms "${1}"
-    attach "${1}" "additions" "Guest Additions"
+    attach "${1}" "additions.iso" "Guest Additions"
     start_vm "${1}"
     wait_for_shutdown "${1}"
     eject "${1}" "Guest Additions"
